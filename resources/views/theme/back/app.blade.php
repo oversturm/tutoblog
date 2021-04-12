@@ -6,10 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords"
-        content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template">
-    <meta name="description"
-        content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+    <meta name="keywords" content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template">
+    <meta name="description" content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
     <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
     <!-- Favicon icon -->
@@ -39,8 +37,7 @@
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
-    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
-        data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full" data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
 
         @include('theme.back.top_header')
 
@@ -82,15 +79,17 @@
     <script src="{{ asset('assets/back//js/custom.min.js') }}"></script>
     <!--This page JavaScript -->
     <!-- <script src="{{ asset('assets/back//js/pages/dashboards/dashboard1.js') }}"></script> -->
-    <!-- Charts js Files -->
-    <script src="{{ asset('assets/back/libs/flot/excanvas.js') }}"></script>
-    <script src="{{ asset('assets/back/libs/flot/jquery.flot.js') }}"></script>
-    <script src="{{ asset('assets/back/libs/flot/jquery.flot.pie.js') }}"></script>
-    <script src="{{ asset('assets/back/libs/flot/jquery.flot.time.') }}"></script>
-    <script src="{{ asset('assets/back/libs/flot/jquery.flot.stack.js') }}"></script>
-    <script src="{{ asset('assets/back/libs/flot/jquery.flot.crosshair.js') }}"></script>
-    <script src="{{ asset('assets/back/libs/flot.tooltip/js/jquery.flot.tooltip.min.js') }}"></script>
-    <script src="{{ asset('assets/back/js/pages/chart/chart-page-init.js') }}"></script>
+    <!--Plugins-->
+    <script src="{{ asset('assets/back/libs/jquery-validation/dist/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('assets/back/libs/jquery-validation/localization/messages_es.js') }}"></script>
+
+    <!--Plugins de paginas especificas -->
+    @yield("scriptsPlugins")
+
+    <!--Scripts de paginas especificas -->
+    @yield("scripts")
+
+
 
 </body>
 
